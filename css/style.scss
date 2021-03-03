@@ -1,0 +1,677 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    line-height: 24px;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Playfair Display', serif;
+}
+    /* Main code start here */
+$theamColor: #002333;
+$btnGreenTheam: #00ff84;
+$btnPurpleTheam: #3722d3;
+%buttonGreen{
+    color: #000;
+    background-color: $btnGreenTheam;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 8px 24px;
+    border-radius: 7px;
+    &:hover {
+        color: $btnGreenTheam;
+        background-color: transparent;
+    }
+    @media (max-width : 1199.98px){
+        padding: 8px 20px;
+    }
+    @media (max-width : 991.98px){
+        font-size: 14px;
+        padding: 8px 11px;
+    }
+    @media (max-width : 767.98px){
+        font-size: 10px;
+        padding: 8px 7px;
+    }
+    @media (max-width : 575.98px){
+        padding: 5px 7px;
+    }
+}
+%buttonWhite{
+    font-size: 18px;
+    font-weight: 400;
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+    padding: 8px 24px;
+    &:hover{
+        background-color: #fff;
+        color: $btnGreenTheam;
+    }
+    @media (max-width : 1199.98px){
+        padding: 8px 20px;
+    }
+    @media (max-width : 991.98px){
+        font-size: 14px;
+        padding: 8px 11px;
+    }
+    @media (max-width : 767.98px){
+        font-size: 10px;
+        padding: 8px 7px;
+    }
+    @media (max-width : 575.98px){
+        padding: 5px 7px;
+    }
+}
+%buttonPurple{
+    font-size: 18px;
+    font-weight: 400;
+    color: $btnPurpleTheam;
+    background-color: transparent;
+    border-color: $btnPurpleTheam;
+    padding: 8px 24px;
+    margin: auto;
+    &:hover{
+        background-color: $btnPurpleTheam;
+        color: #fff;
+    }
+    @media (max-width : 1199.98px){
+        padding: 8px 20px;
+    }
+    @media (max-width : 991.98px){
+        font-size: 14px;
+        padding: 8px 11px;
+    }
+    @media (max-width : 767.98px){
+        font-size: 10px;
+        padding: 8px 7px;
+    }
+    @media (max-width : 575.98px){
+        padding: 5px 7px;
+    }
+}
+%h1{
+    color: #fff;
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: 400;
+    @media (max-width : 991.98px){
+        font-size: 31px;
+        line-height: 41px;
+    }
+    @media (max-width : 767.98px){
+        font-size: 22px;
+        line-height: 32px;
+    }
+    @media (max-width : 575.98px){
+        line-height: 24px;
+    }
+}
+%h2{
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    @media (max-width : 991.98px){
+        font-size: 28px;
+        line-height: 38px;
+    }
+    @media (max-width : 767.98px){
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
+%p{
+    color: #fafafa;
+    font-size: 14px;
+    @media (max-width : 767.98px){
+        font-size: 12px;
+        line-height: 22px;
+    }
+    @media (max-width : 767.98px){
+        font-size: 11px;
+        line-height: 21px;
+    }
+    @media (max-width : 575.98px){
+        font-size: 8px;
+        line-height: 16px;
+    }
+}
+%line{
+    height: 6px;
+    background-color: $btnPurpleTheam;
+    width: 14%;
+    border-radius: 10px;
+    @media (max-width : 991.98px){
+        width: 12%;
+    }
+    @media (max-width : 767.98px){
+        width: 10%;
+    }
+}
+.header-section{
+    background-color: $theamColor;
+    padding: 15px 0px;
+    @media (max-width : 575.98px){
+        padding: 10px 0px;
+    }
+    img{
+        width: 170px;
+        @media (max-width : 991.98px){
+            width: 150px;
+        }
+        @media (max-width : 767.98px){
+            width: 130px;
+        }
+        @media (max-width : 575.98px){
+            width: 90px;
+        }
+    }
+    .navbar-nav {
+        list-style: none;
+        align-items: center;
+        a{
+            margin-right: 30px;
+            @media (max-width:991.98px){
+                margin-right: 0px;
+            }
+            @media (max-width : 767.98px){
+                margin-right: 0px;
+            }
+            @media (max-width : 575.98px){
+                font-size: 12px;
+                margin-right: 0px;
+            }
+            &:hover{
+                border-bottom: 4px solid $btnGreenTheam;
+            }
+        }
+    }
+    .navbar-collapse{
+        @media (max-width:991.98px){
+            text-align: center;
+        }
+    }
+    .nav-link {
+        color: #fff !important;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .btn-success{
+        @extend %buttonGreen;
+        
+    }
+}
+.banner-section{
+    background: url("../images/2ew.png") center center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #ffffff2e;
+    background-blend-mode: color-dodge;
+    text-align: center;
+    padding: 120px 0px;
+    @media (max-width : 991.98px){
+        padding: 90px 0px;
+    }
+    @media (max-width : 767.98px){
+        padding: 50px 0px;
+    }
+    @media (max-width : 575.98px){
+        padding: 10px 0px;
+    }
+    h6{
+        color: $btnGreenTheam;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 600;
+        padding-bottom: 25px;
+        @media (max-width : 991.98px){
+            padding-bottom: 18px;
+        }
+        @media (max-width : 767.98px){
+            font-size: 12px;
+            line-height: 22px;
+            padding-bottom: 8px;
+        }
+        @media (max-width : 575.98px){
+            font-size: 10px;
+            line-height: 20px;
+            padding-bottom: 0px;
+        }
+    }
+    h1{
+        @extend %h1;
+        padding-bottom: 25px;
+        @media (max-width : 991.98px){
+            padding-bottom: 18px;
+        }
+        @media (max-width : 767.98px){
+            padding-bottom: 8px;
+        }
+        @media (max-width : 575.98px){
+            padding-bottom: 0px;
+        }
+    }
+    p{
+        @extend %p;
+        padding-bottom: 30px;
+        @media (max-width : 991.98px){
+            padding-bottom: 18px;
+        }
+        @media (max-width : 767.98px){
+            padding-bottom: 8px;
+        }
+        @media (max-width : 575.98px){
+            padding: 4px;
+        }
+    }
+    .offset-3 {
+        border-right: 1px solid #fff !important;
+    }
+    h5{
+        color: #fafafa;
+        font-size: 14px;
+        @media (max-width : 767.98px){
+            font-size: 10px;
+        }
+        @media (max-width : 575.98px){
+            font-size: 8px;
+        }
+    }
+    .btn-info{
+        @extend %buttonWhite;
+        margin-bottom: 16px;
+        @media (max-width : 991.98px){
+            margin-bottom: 14px;
+        }
+        @media (max-width : 767.98px){
+            margin-bottom: 10px;
+        }
+        @media (max-width : 575.98px){
+            font-size: 6px;
+            margin-bottom: 6px;
+        }
+    }
+    .btn-success{
+        @extend %buttonGreen;
+        margin-left: 19%;
+        margin-bottom: 16px;
+        @media (max-width : 991.98px){
+            margin-bottom: 14px;
+        }
+        @media (max-width : 767.98px){
+            margin-bottom: 10px;
+        }
+        @media (max-width : 575.98px){
+            font-size: 6px;
+            margin-bottom: 6px;
+        }
+    }
+}
+.ourCostomer{
+    padding: 50px 0px;
+    @media (max-width : 991.98px){
+        padding: 35px 0px;
+    }
+    @media (max-width : 767.98px){
+        padding: 25px 0px;
+    }
+    @media (max-width :575.98px){
+        padding: 10px 0px;
+    }
+    h1{
+        @extend %h1;
+        color: #000 !important;
+        text-align: center;
+        padding-bottom: 25px;
+        @media (max-width : 991.98px){
+            padding-bottom: 18px;
+        }
+        @media (max-width : 767.98px){
+            padding-bottom: 14px;
+        }
+    }
+    .row{
+        align-items: center;
+        .ourCostomerImg1{
+            text-align: center;
+            img{
+                width: 150px;
+                @media (max-width : 991.98px){
+                    width: 90px;
+                }
+                @media (max-width : 767.98px){
+                    width: 50px;
+                }
+                @media (max-width : 575.98px){
+                    width: 70px;
+                    margin: 14px 0px;
+                }
+            }
+        }
+        .ourCostomerImg2{
+            text-align: center;
+            img{
+                width: 150px;
+                @media (max-width : 991.98px){
+                    width: 90px;
+                }
+                @media (max-width : 767.98px){
+                    width: 50px;
+                }
+                @media (max-width : 575.98px){
+                    width: 70px;
+                    margin: 14px 0px;
+                }
+            }
+        }
+        .ourCostomerImg3{
+            text-align: center;
+            img{
+                @media (max-width : 767.98px){
+                    width: 30px;
+                }
+                @media (max-width : 575.98px){
+                    width: 70px;
+                    margin: 14px 0px;
+                }
+            }
+        }
+        .ourCostomerImg4{
+            text-align: center;
+            img{
+                width: 150px;
+                @media (max-width : 991.98px){
+                    width: 90px;
+                }
+                @media (max-width : 767.98px){
+                    width: 50px;
+                }
+                @media (max-width : 575.98px){
+                    width: 70px;
+                    margin: 14px 0px;
+                }
+            }
+        }
+        .ourCostomerImg5{
+            text-align: center;
+            img{
+                width: 150px;
+                @media (max-width : 991.98px){
+                    width: 90px;
+                }
+                @media (max-width : 767.98px){
+                    width: 50px;
+                }
+                @media (max-width : 575.98px){
+                    width: 70px;
+                    margin: 14px 0px;
+                }
+            }
+        }
+        .ourCostomerImg6{
+            text-align: center;
+            img{
+                width: 150px;
+                @media (max-width : 991.98px){
+                    width: 90px;
+                }
+                @media (max-width : 767.98px){
+                    width: 50px;
+                }
+                @media (max-width : 575.98px){
+                    width: 70px;
+                    margin: 14px 0px;
+                }
+            }
+        }
+    }
+}
+.builtCulturalSection{
+    .topPart{
+        background-color: #f5f5f5;
+        padding: 50px 0px;
+        @media (max-width : 991.98px){
+            padding: 35px 0px;
+        }
+        @media (max-width : 767.98px){
+            padding: 25px 0px;
+        }
+        h1{
+            @extend %h1;
+            color: #002333 !important;
+            text-align: center;
+            padding-bottom: 20px;
+            @media (max-width : 991.98px){
+                padding-bottom: 14px;
+            }
+            @media (max-width : 767.98px){
+                padding-bottom: 12px;
+            }
+        }
+        .line{
+            @extend %line;
+            margin: auto;
+        }
+        p{
+            @extend %p;
+            color: #002333 !important;
+            text-align: center;
+            padding-top: 25px;
+            @media (max-width : 991.98px){
+                padding-top: 18px;
+            }
+            @media (max-width : 767.98px){
+                padding-top: 14px;
+            }
+        }
+        .btn-light{
+            @extend %buttonPurple;
+            display: flex;
+        }
+    }
+    .bottomPart{
+        @media (max-width : 991.98px){
+            text-align: center;
+            padding: 20px 0px;
+        }
+        @media (max-width : 767.98px){
+            text-align: center;
+            padding: 10px 0px;
+        }
+        img{
+            @media (max-width : 991.98px){
+                width: 700px;
+                padding: 20px 0px;
+            }
+            @media (max-width : 767.98px){
+                width: 500px;
+                padding: 20px 0px;
+            }
+            @media (max-width : 575.98px){
+                width: 400px;
+                padding: 20px 0px;
+            }
+        }
+        .row{
+            align-items: center;
+        }
+        h2{
+            @extend %h2;
+            @media (max-width : 767.98px){
+                padding-bottom: 5px;
+            }
+        }
+        h6{
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: normal;
+            padding: 10px 0px;
+            @media (max-width : 767.98px){
+                font-size: 12px;
+                line-height: 22px;
+                padding: 5px 0px;
+            }
+        }
+        .line{
+            @extend %line;
+            @media (max-width : 991.98px){
+                margin: auto;
+            }
+        }
+        .btn-light{
+            @extend %buttonPurple;
+        }
+    }
+}
+.ourClassSection{
+    background-color: #3721d3;
+    padding: 60px 0px;
+    @media (max-width : 991.98px){
+        padding: 40px 0px;
+    }
+    @media (max-width : 767.98px){
+        padding: 20px 0px;
+    }
+    @media (max-width :575.98px){
+        padding: 10px 0px;
+    }
+    h3{
+        font-size: 25px;
+        line-height: 35px;
+        color: #fff;
+        font-weight: 400;
+        padding-bottom: 20px;
+        text-align: center;
+        @media (max-width : 991.98px){
+            font-size: 20px;
+            padding-bottom: 15px;
+        }
+        @media (max-width : 767.98px){
+            font-size: 16px;
+            padding-bottom: 0px;
+        }
+    }
+}
+.dentons{
+    text-align: center;
+    padding: 60px 0px;
+    @media (max-width : 991.98px){
+        padding: 40px 0px;
+    }
+    @media (max-width : 767.98px){
+        padding: 30px 0px;
+    }
+    @media (max-width :575.98px){
+        padding: 10px 0px;
+    }
+    h5{
+        color: #41444b;
+        font-size: 20px;
+        font-weight: 400;
+        padding: 30px 0px;
+        line-height: 30px;
+        @media (max-width : 1199.98px){
+            font-size: 18px;
+            line-height: 28px;
+        }
+        @media (max-width : 991.98px){
+            font-size: 14px;
+            line-height: 24px;
+            padding: 15px 0px;
+        }
+        @media (max-width : 767.98px){
+            font-size: 10px;
+            line-height: 20px;
+            padding: 10px 0px;
+        }
+        @media (max-width :575.98px){
+            font-size: 8px;
+        }
+    }
+    h6{
+        color: #6c6f74;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: normal;
+        padding-bottom: 20px;
+        @media (max-width : 991.98px){
+            font-size: 12px;
+            line-height: 22px;
+            padding-bottom: 15px;
+        }
+        @media (max-width : 767.98px){
+            font-size: 8px;
+            line-height: 18px;
+            padding-bottom: 10px;
+        }
+    }
+}
+.footerSection{
+    background-color: #002333;
+    text-align: center;
+    padding: 60px 0px;
+    @media (max-width : 991.98px){
+        padding: 40px 0px;
+    }
+    @media (max-width : 767.98px){
+        padding: 20px 0px;
+    }
+    @media (max-width :575.98px){
+        padding: 10px 0px;
+    }
+    h1{
+        @extend %h1;
+        padding-bottom: 20px;
+        @media (max-width : 991.98px){
+            padding-bottom: 15px;
+        }
+        @media (max-width : 767.98px){
+            padding-bottom: 10px;
+        }
+        @media (max-width :575.98px){
+            padding-bottom: 0px;
+        }
+    }
+    .btn-success{
+        @extend %buttonGreen;
+    }
+    ul{
+        padding: 20px 0px;
+        @media (max-width : 991.98px){
+            padding: 10px 0px;
+        }
+        @media (max-width : 767.98px){
+            padding: 8px 0px;
+        }
+        @media (max-width :575.98px){
+            padding: 2px 0px;
+        }
+        display: inline-block;
+        li{
+            display: inline;
+            list-style-type: none;
+            a{
+                color: #fff;
+                span{
+                    padding: 0px 10px;
+                }
+                &:hover{
+                    color: $btnGreenTheam;
+                }
+                @media (max-width : 767.98px){
+                    font-size: 12px;
+                }
+                @media (max-width :575.98px){
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+    p{
+        @extend %p;
+    }
+}
